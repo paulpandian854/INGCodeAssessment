@@ -1,0 +1,30 @@
+#cart{border: 1px solid #000;}
+
+.content {
+    padding: 16px;
+}
+
+.content > mat-card {
+    width: 200px;
+}
+
+#mat-toolbar {
+    color: 'primary'
+}
+
+#cart-img {
+   width: 200px;
+   height: 250px
+}
+
+#table-width {
+    width: 200px;
+}
+
+.main-div{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+

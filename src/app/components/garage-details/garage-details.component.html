@@ -1,0 +1,17 @@
+<!-- Loads Nav Bar-->
+<child-component id="navBar" [trainStationResponse]="trainStationResponse" (submit)="proceedToCheckout()"
+(dropDownClick)="onDropDownClick($event)"></child-component>
+
+<div class="content" id="GarageComponent">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxFlex="25%" *ngFor="let num of vehicles;let i = index">
+
+      <!--Card Layout-->
+
+      <mat-card-comp [num]="num" [index]="i" (clickCard)="onClickCard($event)" (addToCard)="onAddToCart($event)"
+        (removeFromCard)="OnRemoveFromCart($event)"></mat-card-comp>
+
+
+    </div>
+  </div>
+</div>

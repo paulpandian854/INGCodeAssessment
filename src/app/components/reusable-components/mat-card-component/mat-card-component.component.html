@@ -1,0 +1,20 @@
+<mat-card class="mat-elevation-z4">
+    <mat-card-header>
+      <mat-card-title (click)="onClickCard(num,index)">{{num.make}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="imageSrc[index]" (click)="onClickCard(num,index)">
+    
+    <mat-card-content id="cardContent">
+      <p>Model : {{num.model}}</p>
+      <p>Make : {{num.make}}</p>
+      <p>Year of Manufacture : {{num.year_model}}</p>
+      <p>Licensed : {{num.licensed}}</p>
+      <p>Price : {{(num.price).toString() | truncate}}</p>
+    </mat-card-content>
+
+    
+    <mat-card-actions>
+      <button *ngIf="addToCardBtnToggle" mat-button (click)="onAddToCart(num)">Add to Cart</button>
+      <button mat-button (click)="OnRemoveFromCart(num)">Remove from Cart</button>
+    </mat-card-actions>
+  </mat-card>

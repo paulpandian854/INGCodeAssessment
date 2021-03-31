@@ -1,0 +1,21 @@
+<mat-toolbar id="ToolBar">
+  <span>Second Hand Cars Garage</span>
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <button class="ml-5" mat-raised-button color="primary" matBadgeColor="accent">
+      Please Select Warehouse
+    </button>
+  </button>
+  <button class="mx-auto" mat-raised-button color="primary" matBadgeColor="accent" (click)="proceedToCheckout()">
+    Proceed to Cart for Check-Out
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <div *ngFor="let res of trainStationResponse">
+      <button mat-menu-item (click)="onDropDownClick(res)">
+        <mat-icon>dialpad</mat-icon>
+        <span id="resName">{{res.name}}</span>
+      </button>
+    </div>
+  </mat-menu>
+  
+</mat-toolbar>

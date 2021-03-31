@@ -1,0 +1,31 @@
+<mat-table [dataSource]="vehicles">
+    <!-- Maker Definition -->
+    <ng-container matColumnDef="username">
+      <mat-header-cell *matHeaderCellDef> Car Make </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.make}} </mat-cell>
+    </ng-container>
+
+    <!-- Model Definition -->
+    <ng-container matColumnDef="age">
+      <mat-header-cell *matHeaderCellDef> Model </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.model}} </mat-cell>
+    </ng-container>
+
+    <!-- Price Definition -->
+    <ng-container matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef> Price </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.price}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="remove">
+      <mat-header-cell *matHeaderCellDef> Remove From Checkout </mat-header-cell>
+      <mat-cell *matCellDef="let row"><button type="button" class="close p-0 m-0" aria-label="Close"
+          (click)="removeFromCart(row)">
+          <span aria-hidden="true">&times;</span>
+        </button></mat-cell>
+    </ng-container>
+
+    <!-- Header and Row Declarations -->
+    <mat-header-row *matHeaderRowDef="['username', 'age', 'title', 'remove']"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: ['username', 'age', 'title', 'remove']"></mat-row>
+  </mat-table>

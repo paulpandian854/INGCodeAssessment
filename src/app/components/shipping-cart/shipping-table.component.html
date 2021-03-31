@@ -1,0 +1,33 @@
+<div class="main-div" id="CheckOutCart">
+  <main class="mt-5 pt-4">
+    <div class="container wow fadeIn">
+      <h2 class="my-5 h2 text-center text-white">Checkout form</h2>
+
+      
+      <div class="row">
+        <div class="col-md-12 mb-4">
+          <mat-table-component [vehicles]="vehicles" (removeFromCard)="removeFromCart($event)"> </mat-table-component>
+        </div>
+      </div>
+
+
+      <form class="card p-2">
+        <div class="input-group">
+          <input type="text" [(ngModel)]="totalAmount" name="totalAmount" class="form-control"
+            placeholder="Total Amount" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        </div>
+      </form>
+
+      <form class="card p-2">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Promo code" aria-label="Recipient's username"
+            aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-secondary btn-md waves-effect m-0" type="button">Proceed for payment Page</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+</div>

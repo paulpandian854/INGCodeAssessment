@@ -1,0 +1,12 @@
+<mat-card-content>
+  <img id="profile-img" mat-card-image [src]="imgsrc[data.index]">
+  <p *ngIf="data.licensed">
+    Model : {{data.model}} <br />
+    WareHouse Location - Lat : {{data.wareHo[0].location.lat}} Long: {{data.wareHo[0].location.long}} <br />
+    Car Location: {{data.wareHo[0].cars.location}}
+  </p>
+  <p *ngIf="!data.licensed">
+    Can't display details, new license needs to be procured, Please select cars which has License
+  </p>
+
+</mat-card-content>

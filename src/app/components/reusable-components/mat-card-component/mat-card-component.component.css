@@ -1,0 +1,15 @@
+.content {
+    padding: 16px;
+}
+
+.content > mat-card {
+    width: 200px;
+}
+
+#mat-toolbar {
+    color: 'primary'
+}
+
+.mat-card-image {
+    height: 250px!important;
+}
